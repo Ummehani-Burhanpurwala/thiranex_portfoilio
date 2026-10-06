@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Ummehani – Portfolio</title>
+<meta name="description" content="Contact Ummehani using the accessible form for enquiries and collaborations.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Ummehani">
+<link rel="canonical" href="https://example.com/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact | Ummehani – Portfolio">
+<meta property="og:description" content="Contact Ummehani using the accessible form for enquiries and collaborations.">
+<meta property="og:url" content="https://example.com/contact.html">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header" role="banner">
+<div class="wrap">
+<a class="brand" href="index.html">Ummehani</a>
+<nav class="nav" aria-label="Primary"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav>
+</div>
+</header>
+<main id="main" class="wrap">
+<h1>Contact</h1>
+<p class="lead">Send a message and I will reply by email. Fields marked <span class="req" aria-hidden="true">*</span> (required) must be filled in.</p>
+<form id="contact-form" action="#" method="post" aria-describedby="form-status">
+<fieldset>
+<legend>Your details</legend>
+<div>
+<label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+<input type="text" id="name" name="name" autocomplete="name" required>
+</div>
+<div>
+<label for="email">Email address <span class="req" aria-hidden="true">*</span>
+<span class="hint" id="email-hint">Example: name@example.com</span></label>
+<input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hint" required>
+</div>
+</fieldset>
+<fieldset>
+<legend>Your message</legend>
+<div>
+<label for="topic">Topic</label>
+<select id="topic" name="topic">
+<option value="general">General enquiry</option>
+<option value="project">Project collaboration</option>
+<option value="event">Event hosting</option>
+</select>
+</div>
+<div>
+<label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+<textarea id="message" name="message" rows="6" required></textarea>
+</div>
+</fieldset>
+<div><button class="btn" type="submit">Send message</button></div>
+<p id="form-status" class="status" role="status" aria-live="polite"></p>
+</form>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="wrap">
+<p><small>&copy; 2026 Ummehani. Built with semantic HTML5.</small></p>
+<nav aria-label="Social links"><ul class="tags">
+<li><a href="https://github.com/your-username">GitHub profile</a></li>
+<li><a href="https://www.linkedin.com/in/your-username">LinkedIn profile</a></li>
+</ul></nav>
+</div>
+</footer>
+<script>
+const f=document.getElementById("contact-form"),s=document.getElementById("form-status");
+f.addEventListener("submit",e=>{e.preventDefault();
+ if(!f.checkValidity()){const bad=f.querySelector(":invalid");s.textContent="Please complete the required field: "+(bad.labels[0].firstChild.textContent.trim())+".";bad.focus();return;}
+ s.textContent="Thank you. Your message is ready to send once a form backend is connected.";f.reset();});
+</script>
+</body>
+</html>
