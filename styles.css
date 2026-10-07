@@ -17,7 +17,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .nav a{color:var(--ink);text-decoration:none;padding:.4rem .1rem;border-bottom:3px solid transparent}
 .nav a:hover{border-color:var(--line)}
 .nav a[aria-current="page"]{border-color:var(--accent);font-weight:600}
-main{padding-block:3rem}
+main.wrap{padding-top:3rem;padding-bottom:3rem}
 .lead{font-size:1.25rem;color:var(--muted);max-width:40rem}
 .btn{display:inline-block;background:var(--brand);color:var(--bg);padding:.75rem 1.4rem;border:0;border-radius:6px;font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
 .btn:hover{filter:brightness(1.15)}
@@ -43,3 +43,7 @@ ul.list{padding-left:1.25rem;max-width:44rem}
 ul.list li{margin-bottom:.4rem}
 .stats{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;margin:1.5rem 0 0;padding:0;list-style:none}
 .stats strong{display:block;font-family:Georgia,serif;font-size:1.6rem;color:var(--brand)}
+.tags+h3{margin-top:1.75rem}
+.nav a{display:inline-block;padding:.6rem .25rem}
+.site-footer a{display:inline-block;padding:.3rem 0}
+.card h3{margin-top:0}
