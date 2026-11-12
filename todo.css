@@ -1,0 +1,28 @@
+/* To-Do page: uses the tokens from styles.css, so light/dark works automatically */
+.todo-app{max-width:40rem;margin-inline:auto;display:grid;gap:1.25rem}
+.todo-app h1{margin-bottom:0}
+.todo-app form#add-form{display:flex;gap:.5rem;max-width:none}
+#add-form input{flex:1;min-width:0}
+.toolbar{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between}
+#filters{display:flex;gap:.25rem;padding:.25rem;background:var(--surface);border:1px solid var(--line);border-radius:99px}
+.filter{min-height:40px;padding:.3rem 1rem;border:0;border-radius:99px;background:transparent;color:var(--ink);font:600 .95rem var(--sans);cursor:pointer;transition:background-color .2s}
+.filter:hover{background:var(--bg)}
+.filter[aria-pressed="true"]{background:var(--brand);color:var(--bg)}
+.link-btn{min-height:44px;padding:.3rem .5rem;border:0;background:none;color:var(--accent);font:600 .95rem var(--sans);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.link-btn:disabled{color:var(--muted);opacity:.6;cursor:not-allowed;text-decoration:none}
+.tasks{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.task{display:flex;align-items:center;gap:.6rem;padding:.5rem .75rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);transition:opacity .2s}
+.task input[type="checkbox"]{flex:none;width:1.4rem;height:1.4rem;margin:0;accent-color:var(--accent);cursor:pointer}
+.task label{flex:1;min-width:0;margin:0;font-weight:400;overflow-wrap:anywhere;cursor:pointer}
+.task.done label{text-decoration:line-through;color:var(--muted)}
+.task.done{opacity:.8}
+.task input.edit{flex:1;width:auto;min-width:0}
+.task button{min-height:44px;min-width:44px;padding:.3rem .7rem;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:600 .9rem var(--sans);cursor:pointer}
+.task button:hover{border-color:var(--accent)}
+.task button.danger:hover{border-color:#c0392b;color:#c0392b}
+.empty{padding:1.5rem;text-align:center;color:var(--muted);border:2px dashed var(--line);border-radius:var(--r);margin:0}
+.summary{margin:0;color:var(--muted)}
+@media (max-width:480px){
+  .task{flex-wrap:wrap}
+  .task label{flex-basis:calc(100% - 2.5rem)}
+}

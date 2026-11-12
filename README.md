@@ -7,4 +7,6 @@ Multi-page portfolio built with semantic HTML5, ARIA labels, SEO meta tags and a
 - Mobile-first media queries at 600px, 900px and 1200px
 - CSS custom properties for light/dark themes (OS setting plus a saved toggle in `theme.js`)
 
-Pages: Home, About, Projects, Contact. Open `index.html` to run locally.
+Pages: Home, About, Projects, To-Do, Contact.
+
+To-Do app (`todo.html`, `todo.js`, `todo.css`): add, edit, delete and complete tasks; All/Active/Completed filters; data saved in `localStorage`; delegated event listeners. Open `index.html` to run locally.

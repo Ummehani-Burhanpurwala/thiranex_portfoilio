@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>To-Do List | Ummehani Burhanpurwala – Portfolio</title>
+<meta name="description" content="A client-side to-do list with add, edit, delete, filters and automatic saving in the browser.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Ummehani Burhanpurwala">
+<link rel="canonical" href="https://ummehani-burhanpurwala.github.io/thiranex_portfoilio/todo.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%2323305a%27/%3E%3Ctext x=%2750%27 y=%2772%27 font-size=%2760%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Georgia%27%3EU%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#23305a">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="todo.css">
+<script src="theme.js"></script>
+</head>
+<body class="todo">
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header" role="banner">
+<div class="wrap">
+<a class="brand" href="index.html">Ummehani Burhanpurwala</a>
+<nav class="nav" aria-label="Primary"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="todo.html" aria-current="page">To-Do</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+<button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">Theme: <span>Light</span></button>
+</div>
+</header>
+<main id="main" class="wrap">
+<div class="todo-app">
+<h1>To-Do List</h1>
+<p class="lead">Add tasks, edit them, tick them off and filter the list. Everything is saved in this browser automatically.</p>
+
+<form id="add-form" autocomplete="off">
+<label class="visually-hidden" for="new-task">New task</label>
+<input type="text" id="new-task" maxlength="200" placeholder="What needs to be done?" required>
+<button class="btn" type="submit">Add task</button>
+</form>
+
+<div class="toolbar">
+<div id="filters" role="group" aria-label="Filter tasks">
+<button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+<button type="button" class="filter" data-filter="active" aria-pressed="false">Active</button>
+<button type="button" class="filter" data-filter="completed" aria-pressed="false">Completed</button>
+</div>
+<button type="button" class="link-btn" id="clear-done">Clear completed</button>
+</div>
+
+<section aria-label="Task list">
+<ul id="task-list" class="tasks"></ul>
+<p id="empty" class="empty" hidden></p>
+</section>
+
+<p class="summary" id="count"></p>
+<p id="todo-status" class="status" role="status" aria-live="polite"></p>
+</div>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="wrap">
+<p><small>&copy; 2026 Ummehani Burhanpurwala. Built with semantic HTML5.</small></p>
+<nav aria-label="Social links"><ul class="tags">
+<li><a href="https://github.com/Ummehani-Burhanpurwala">GitHub profile</a></li>
+<li><a href="https://www.linkedin.com/in/ummehani-burhanpurwala">LinkedIn profile</a></li>
+<li><a href="mailto:ummehaniburhanpurwala8@gmail.com">Email me</a></li>
+</ul></nav>
+</div>
+</footer>
+<script src="todo.js"></script>
+</body>
+</html>
